@@ -1,0 +1,3 @@
+this is gonna be a network analyzer which discovers a network's computers and ports 
+and their known ARI services (like port 25), then convert it all to some graph that
+be displayed with the help of some python library
