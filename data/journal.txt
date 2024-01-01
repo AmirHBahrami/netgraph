@@ -3,10 +3,10 @@ and their known ARI services (like port 25), then convert it all to some graph t
 be displayed with the help of some python library
 
 # TODO_1
-right now thread managements are done outside pools. in:
-	runner.py > distribute_workload
-	utils.py > join_worker_threads
-so make it based!
+	right now thread managements are done outside pools. in:
+		runner.py > distribute_workload
+		utils.py > join_worker_threads
+	so make it based!
 
 # TODO_2
 give 2 outputs: 
@@ -18,3 +18,7 @@ like:
 	---
 	80: stackexchange.com
 	443: stackexchange.com,yahoo.com
+# TODO_3
+	fuck u github, you little prick. I'm doing this to increase my contributions
+	bc I forgot to set my "user.email". therefore I hereby call github a little 
+	twat-face and I hope bill gates dies of testicle cancer or get ep$tein'ed
