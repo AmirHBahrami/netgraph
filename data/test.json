@@ -1,8 +1,5 @@
 {
 "80":{"protocol":"tcp","title":"http"},
 "443":{"protocol":"tcp","title":"https"},
-"989":{"protocol":"tcp","title":"ftps-data"},
-"990":{"protocol":"tcp","title":"ftps"},
-"993":{"protocol":"tcp","title":"imaps"},
-"995":{"protocol":"tcp","title":"pop3s"}
+"993":{"protocol":"tcp","title":"imaps"}
 }

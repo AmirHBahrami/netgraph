@@ -3,22 +3,22 @@ from net_util import get_ips,get_ports
 from sys import stderr as sys_stderr,exit as sys_exit
 from utils import is_sigint_met
 
-def __ping_sock(sock,host,port=80,time_out=0.5,alias=None,verbose=False):
+def __ping_sock(sock,host,port=80,time_out=0.5,port_alias=None,host_alias=None,verbose=False):
 	"""
 		connect a socket,  try-catch it and close it at the end
 	"""
 	result=False
-	if alias==None: # for printing
-		alias=sock.getpeername()
+	if host_alias==None: # for printing
+		host_alias=sock.getpeername()
 	try:
 		sock.settimeout(time_out)
 		sock.connect((host,port))
 		result=True
 		if verbose:
-			print("[x]",port,alias)
+			print("[x] {} {} {}".format(port,port_alias,host_alias))
 	except:
 		if verbose:
-			print("[ ]",port,alias)
+			print("[ ] {} {} {}".format(port_alias,port,host_alias))
 		pass
 	sock.close()
 	return result
@@ -31,6 +31,7 @@ def ping(ip='localhost',port=80,host=None,alias=None,verbose=False):
 	"""
 
 	# setting host
+	host_alias=host # remember for verbosity
 	if not host is None:
 		host=get_ips(host)[0] # get the first ip that comes to mind
 	else:
@@ -42,7 +43,7 @@ def ping(ip='localhost',port=80,host=None,alias=None,verbose=False):
 		if is_sigint_met(): # for some resaon sockets won't let sigint in normal way to work
 			# print('[SIGINT]')
 			sys_exit(0)
-		return __ping_sock(s,host,port,time_out=.3,alias=alias,verbose=verbose)
+		return __ping_sock(s,host,port,time_out=.3,port_alias=alias,host_alias=host_alias,verbose=verbose)
 
 def ping_all(host,type="host",ports=None,verbose=False):
 	"""

@@ -1,0 +1,6 @@
+{
+	"__MAX_THREADS":4,
+	"__HOSTS_PER_THREAD":5,
+	"__MAX_HOSTS":-1,
+	"__LOG_PATH":"./logs"
+}

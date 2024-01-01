@@ -1,3 +1,20 @@
 this is gonna be a network analyzer which discovers a network's computers and ports 
 and their known ARI services (like port 25), then convert it all to some graph that
 be displayed with the help of some python library
+
+# TODO_1
+right now thread managements are done outside pools. in:
+	runner.py > distribute_workload
+	utils.py > join_worker_threads
+so make it based!
+
+# TODO_2
+give 2 outputs: 
+	1-host based : shows which hosts have which ports open
+	2-port based : shows which portnumbers have successfully returned answer on which hosts
+like:
+	stackexchange.com : 80,443
+	yahoo.com: 443
+	---
+	80: stackexchange.com
+	443: stackexchange.com,yahoo.com
