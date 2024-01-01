@@ -9,10 +9,9 @@ declare -a website_lists=(
 	"superfastpython.com"	"docs.python.org"
 	"businessnamegenerator.com" "www.namebounce.com"
 	"namelix.com" "www.nameboy.com "
-	"shitwank.com" # "facebook.com"
 )
 
 #for w in "${website_lists[@]}"
 #do
-python3 . "${website_lists[@]}" -o "./data/${date}.json"
+python3 . "${website_lists[@]}" -o "./data/${date}.json" -v
 #done

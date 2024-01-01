@@ -21,7 +21,7 @@ p.add_argument(
 )
 
 p.add_argument(
-	'-v' ,
+	'-v','--verbose',
 	default=False,
 	help='write closed ports as well as open ports',
 	action=argparse.BooleanOptionalAction
